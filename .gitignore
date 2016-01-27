@@ -1,12 +1,29 @@
-*.class
+import java.util.Scanner;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+public class standartDeviation{
 
-# Package Files #
-*.jar
-*.war
-*.ear
+	private static Scanner sc;
+	public static void main(String[] args) {
+ 
+                sc = new Scanner(System.in);
+ 		int array;  int [] a; double b,d,c;
+            System.out.print("Enter the number of elements: ");
+            array=sc.nextInt();
+            a=new int[array];
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+        for(int w=0;w<array;w++){
+        	System.out.print((w+1) +".enter the number: ");
+        	a[w]=sc.nextInt();
+        } b=0;
+        for(int r=0;r<array;r++){
+        	b=a[r]+b; }
+        b=b/array;
+        c=0;
+	for(int e=0;e<array;e++){
+		c=c+(Math.pow(a[e]-b,2));
+	}
+	d=Math.sqrt(c/(array-1));  
+	System.out.println("standard deviation value: "+d);
+	}
+
+}
